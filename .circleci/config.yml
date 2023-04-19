@@ -1,0 +1,33 @@
+version: 2.1
+orbs:
+  node: circleci/node@5.0.0
+  
+
+jobs: 
+  deploy:
+    parameters:
+      node-version:
+        type: string
+    docker:
+      - image: cimg/node:<< parameters.node-version >>
+    steps:
+      - checkout
+      - run:
+          name: Install packages
+          command: npm install syntax-error --no-package-lock --no-save --also=dev
+      - run: sudo apt-get update && sudo apt-get install python3-pip groff-base
+      - run: sudo apt-get install imagemagick libmagickcore-dev libmagickwand-dev
+      - run: sudo apt-get install libjpeg-dev libpng-dev libtiff-dev libwebp-dev
+      - run: sudo apt-get install ffmpeg
+      # Run rspec in parallel
+      - run:
+          name: Run test using nodejs << parameters.node-version >>
+          command: npm install && npm update && npm i pm2 && pm2 start 'npm start' && pm2 save && pm2 monit
+        
+workflows:
+  all-deploy:
+    jobs:
+      - deploy: 
+          matrix:
+            parameters:
+              node-version: ['16.14.0']
