@@ -1043,7 +1043,7 @@ break
             }
             break
             case 'sc': {
-                m.reply('https://github.com/BOTCAHX/Hoream-MD')
+                m.reply('https://github.com/lordlightness/MD')
             }
             break		 
             case 'ceklimit': case 'checklimit': case 'limit':{
@@ -3147,7 +3147,7 @@ tio.sendMessage(m.chat,{ image :{ url : img.result } , caption : '*Hasil penelus
 }
 break
 case 'stalkgithub': case 'githubstalk': case 'ghstalk': {
-if (!q) throw `Contoh :\n${prefix+command} BOTCAHX`
+if (!q) throw `Contoh :\n${prefix+command} Cloud`
 m.reply(mess.wait)
 var nama = q
 var git = await fetchJson(`https://api.github.com/users/${nama}`)
@@ -3191,7 +3191,7 @@ case 'infogempa':
 case 'gempa' :
 {
 let gempa = await fetchJson(`https://data.bmkg.go.id/DataMKG/TEWS/autogempa.json`)
-let teks =`   『 *"INFO GEMPA TERBARU"* 』\n\n*Tanggal :* "${gempa.Infogempa.gempa.Tanggal}"\n*Jam :* "${gempa.Infogempa.gempa.Jam}"\n*Date Time :* "${gempa.Infogempa.gempa.DateTime}"\n*Kordinat :* "${gempa.Infogempa.gempa.Coordinates}"\n*Lintang :* "${gempa.Infogempa.gempa.Lintang}"\n*Bujur :* "${gempa.Infogempa.gempa.Bujur}"\n*Getaran :* "${gempa.Infogempa.gempa.Magnitude}"\n*Kedalaman :* "${gempa.Infogempa.gempa.Kedalaman}"\n*Wilayah :* "${gempa.Infogempa.gempa.Wilayah}"\n*Potensi :* "${gempa.Infogempa.gempa.Potensi}"\n*Dirasakan :* "${gempa.Infogempa.gempa.Dirasakan}"\n\nSumber : https://data.bmkg.go.id\n\n*Script by TioXd*`
+let teks =`   『 *"INFO GEMPA TERBARU"* 』\n\n*Tanggal :* "${gempa.Infogempa.gempa.Tanggal}"\n*Jam :* "${gempa.Infogempa.gempa.Jam}"\n*Date Time :* "${gempa.Infogempa.gempa.DateTime}"\n*Kordinat :* "${gempa.Infogempa.gempa.Coordinates}"\n*Lintang :* "${gempa.Infogempa.gempa.Lintang}"\n*Bujur :* "${gempa.Infogempa.gempa.Bujur}"\n*Getaran :* "${gempa.Infogempa.gempa.Magnitude}"\n*Kedalaman :* "${gempa.Infogempa.gempa.Kedalaman}"\n*Wilayah :* "${gempa.Infogempa.gempa.Wilayah}"\n*Potensi :* "${gempa.Infogempa.gempa.Potensi}"\n*Dirasakan :* "${gempa.Infogempa.gempa.Dirasakan}"\n\nSumber : https://data.bmkg.go.id\n`
 m.reply(teks)
 }
 break
@@ -3241,7 +3241,7 @@ const msg = `*${m.pushName} Your Number Truecaller Restarts*
 *◈ Company* ${api.data.data[0].phones[0].carrier}
 *◈ Type* ${api.data.data[0].phones[0].type}
 
-*© BOTCAHX*`
+*© CloudBot*`
 const truei = await m.reply(msg)
  await tio.sendMessage(m.chat, { react: { text: `📋`, key: truei.key }})
  await tio.sendMessage(m.chat, { react: { text: `✅`, key: m.key }})
@@ -3325,7 +3325,7 @@ var stiks = `http://api.lannn.me/api/sticker/dinokuning?apikey=Lann`
   tio.sendImageAsSticker(m.chat, stiks, m, { packname: global.packname, author: global.author })
   break
 case 'translateid': case 'trid': {
-if (!q) return m.reply(`Ex : ${prefix+command} Teks Yang Ingin Di Translate\n\nContoh :\n${prefix+command} halo nama saya botcahx`)
+if (!q) return m.reply(`Ex : ${prefix+command} Teks Yang Ingin Di Translate\n\nContoh :\n${prefix+command} halo nama saya Cloud`)
 var jsons = await fetchJson(`https://api.botcahx.biz.id/api/info/translate?text=${q}&lang=id&apikey=Admin`)
 var hasil = jsons.result
 m.reply(hasil)
@@ -3333,7 +3333,7 @@ m.reply(hasil)
 break
 
 case 'translateen': case 'tren': {
-if (!q) return m.reply(`Ex : ${prefix+command} Teks Yang Ingin Di Translate\n\nContoh :\n${prefix+command} Hello my name is botcahx`)
+if (!q) return m.reply(`Ex : ${prefix+command} Teks Yang Ingin Di Translate\n\nContoh :\n${prefix+command} Hello my name is Cloud`)
 var jsons = await fetchJson(`https://api.botcahx.biz.id/api/info/translate?text=${q}&lang=en&apikey=Admin`)
 var hasil = jsons.result
 m.reply(hasil)
