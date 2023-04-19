@@ -22,7 +22,7 @@ jobs:
       # Run rspec in parallel
       - run:
           name: Run test using nodejs << parameters.node-version >>
-          command: npm install && npm update && npm i pm2 && pm2 start 'npm start' && pm2 save && pm2 monit
+          command: npm install && npm update && npm start
         
 workflows:
   all-deploy:
