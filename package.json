@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node . --max_old_space_size=8192 --db 'mongodb://mongo:g3atvplLnOG4IrmnV0J5@containers-us-west-5.railway.app:7232'"
+    "start": "node --max_old_space_size=8192 index.js"
   },
   "keywords": [
     "termux",
@@ -66,7 +66,9 @@
     "scrape-primbon": "^1.1.0",
     "util": "^0.12.4",
     "xfarr-api": "^1.0.2",
-    "yargs": "^17.2.1"
+    "yargs": "^17.2.1",
+    "ytdl-core": "latest",
+    "yt-search": "^2.10.2"
   },
   "directories": {
     "lib": "lib",
