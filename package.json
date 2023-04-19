@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node . --max_old_space_size=8192 --db 'mongodb://mongo:g3atvplLnOG4IrmnV0J5@containers-us-west-5.railway.app:7232'"
+    "start": "node . --max_old_space_size=8192 --db 'mongodb+srv://dellasdharma16:iznOWRIAFP1HujxL@cluster0.aa5v1dh.mongodb.net/?retryWrites=true&w=majority'"
   },
   "keywords": [
     "termux",
