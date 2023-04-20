@@ -61,6 +61,8 @@ if (global.db) setInterval(async () => {
     if (global.db.data) await global.db.write()
   }, 30 * 1000)
 
+if (opts['server']) (await import('./server.js')).default(global.tio, PORT)
+
 async function startTio() {
 const { state, saveCreds } = await useMultiFileAuthState('./src/sesi')
     const tio = tioConnect({
