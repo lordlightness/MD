@@ -2,7 +2,7 @@ let express = require('express')
 let { createServer } = require('http')
 let path = require('path')
 let { Socket } = require'socket.io'
-let toBuffer = require('qrcode')'
+let toBuffer = require('qrcode')
 let fetch = require('node-fetch')
 
 function connect(tio, PORT) {
