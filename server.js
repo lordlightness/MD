@@ -8,18 +8,17 @@ let fetch = require('node-fetch')
 function connect(tio, PORT) {
     let app = global.app = express()
     console.log(app)
-    let server = global.server = createServer(app)
+    let server = global.server = createServer((__, res) => res.end("Aowwkwwk"))
     // app.use(express.static(path.join(__dirname, 'views')))
-    let _qr = 'invalid'
 
-    tio.ev.on('connection.update', function appQR({ qr }) {
+/*    tio.ev.on('connection.update', function appQR({ qr }) {
         if (qr) _qr = qr
     })
 
     app.use(async (req, res) => {
         res.setHeader('content-type', 'image/png')
         res.end(await toBuffer(_qr))
-    })
+    })*/
 
     // let io = new Socket(server)
     // io.on('connection', socket => {
